@@ -27,19 +27,19 @@ export default function Navbar() {
         {/* <ul className="md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0"> */}
         <ul className={`md:flex md:space-x-2 md:ml-auto md:relative absolute top-full left-0 right-0 ${menuOpen ? 'block' : 'hidden md:block'} ${darkMode ? 'bg-black text-white ' : 'bg-white text-gray-900 hover:bg-gray-50'}`}>
           <li>
-          <Link href={''} className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Home</Link>
+          <Link href="/about" className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">About</Link>
           </li>
           <li>
-          <Link href={''} className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Services</Link>
+          <Link href="/services" className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Services</Link>
           </li>
           <li>
-          <Link href={''} className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Work</Link>
+          <Link href="/work" className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Work</Link>
           </li>
           <li>
-          <Link href={''} className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Blog</Link>
+          <Link href="/blog" className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Blog</Link>
           </li>
           <li>
-          <Link href={''} className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Contact</Link>
+          <Link href="/contact" className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">Contact</Link>
           </li>
           <li className="hidden md:flex items-center ml-auto">
           <div className="border-l border-gray-300 h-8"></div>
