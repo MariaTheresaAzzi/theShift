@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Logo from '../public/theshiftlogo.png';
-import { Inria_Serif } from '@next/font/google'
+import { Inria_Serif } from '@next/font/google';
+import { useDarkMode } from '../context/DarkModeContext'
 
 const Inriaserif = Inria_Serif({
   subsets: ['latin'],
@@ -13,17 +14,8 @@ const Inriaserif = Inria_Serif({
 
 
 export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(false); // Initial state is light mode (white)
+  const { darkMode, toggleDarkMode } = useDarkMode();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Handle the dark mode toggle and apply the class to the body
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark'); // Add 'dark' class to body for dark mode
-    } else {
-      document.body.classList.remove('dark'); // Remove 'dark' class from body for light mode
-    }
-  }, [darkMode]);
 
   return (
     <div className={Inriaserif.className}>
@@ -56,7 +48,7 @@ export default function Navbar() {
           {/* Light/Dark Mode Toggle Icon for Bigger Screens */}
           <li className="hidden md:flex items-center ml-auto">
           <Link href={''} className="flex md:inline-flex p-4 items-center hover:text-[#8243FF]">EN</Link>
-            <div className="cursor-pointer flex md:inline-flex p-4 items-center" onClick={() => setDarkMode(!darkMode)}>
+            <div className="cursor-pointer flex md:inline-flex p-4 items-center" onClick={toggleDarkMode}>
               {darkMode ? (
                 <svg className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -83,7 +75,7 @@ export default function Navbar() {
         {/* Light/Dark Mode Toggle Icon for Smaller Screens */}
         <div className="flex md:hidden ml-auto items-center">
           <Link href={''} className="flex md:inline-flex p-4 items-center hover:text-[#8243FF]">EN</Link>
-          <div className="cursor-pointer flex md:inline-flex p-4 items-center" onClick={() => setDarkMode(!darkMode)}>
+          <div className="cursor-pointer flex md:inline-flex p-4 items-center" onClick={toggleDarkMode}>
             {darkMode ? (
               <svg className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
