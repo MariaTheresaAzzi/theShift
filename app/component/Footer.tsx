@@ -17,11 +17,11 @@ export default function Footer() {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
     return(
-        <div className={`${darkMode ? 'bg-black text-white' : 'bg-white text-gray-900 hover:bg-gray-50'}`}>
+        <div className={`${darkMode ? 'bg-black text-white' : 'text-gray-900'}`}>
         <div className={Inriaserif.className}>
-            <div className="flex flex-col px-6 border-t">
+            <div className="flex flex-col px-4 sm:px-8 md:px-10 lg:px-12 border-t">
             <div>
-                <Image src={Logo} alt="logo" width={192} height={172} className="py-0 md:py-4" />
+                <Image src={Logo} alt="logo" width={192} height={172} className="py-0 md:py-2" />
             </div>
             <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-6 p-2">
                 <div className='flex flex-col gap-2'>
@@ -52,7 +52,7 @@ export default function Footer() {
                 </div>
             </div>
             <div>
-            <div className="border-t border-gray-300 my-4"></div>
+            <div className="border-t border-gray-300 mt-4"></div>
             </div>
             <div className='flex justify-center items-center py-4 gap-2'>
                 <FaCreativeCommons className={`${darkMode ? 'text-gray-400' : 'dark:text-gray-500'} h-4 w-4`} />
