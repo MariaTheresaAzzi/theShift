@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import Logo from '../public/theshiftlogo.png';
+import Logo from '../public/blacklogo.png';
 import { Inria_Serif } from '@next/font/google';
 import { useDarkMode } from '../context/DarkModeContext'
 
@@ -19,13 +19,16 @@ export default function Navbar() {
 
   return (
     <div className={Inriaserif.className}>
-    <div className={`${darkMode ? 'bg-black text-white ' : 'bg-white text-gray-900 hover:bg-gray-50'}`}>
-      <nav className="flex px-6 border-b md:shadow-lg items-center relative">
+    <div className={`${darkMode ? 'bg-black text-white ' : 'text-gray-900'}`}>
+      {/* <nav className="flex px-6 border-b md:shadow-lg items-center relative"> */}
+      <nav className="flex px-4 sm:px-8 md:px-10 lg:px-12 border-b items-center relative">
         <div className="text-lg font-bold md:py-0 py-4 ">
+        <Link href="/">
         <Image src={Logo} alt="logo" width={92} height={72} className="py-0 md:py-4" />
+        </Link>
         </div>
         {/* <ul className="md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0"> */}
-        <ul className={`md:flex md:space-x-2 md:ml-auto md:relative absolute top-full left-0 right-0 ${menuOpen ? 'block' : 'hidden md:block'} ${darkMode ? 'bg-black text-white ' : 'bg-white text-gray-900 hover:bg-gray-50'}`}>
+        <ul className={`md:flex md:space-x-2 md:ml-auto md:relative absolute top-full left-0 right-0 ${menuOpen ? 'block' : 'hidden md:block'} ${darkMode ? 'bg-black text-white ' : ' text-gray-900 '}`}>
           <li>
           <Link href="/about" className="flex md:inline-flex p-4 items-center hover:text-[#8243FF] hover:underline hover:underline-offset-4 hover:decoration-[#8243FF]">About</Link>
           </li>
